@@ -38,6 +38,7 @@ func main() {
 
 	cfg := discovery.SDConfig{
 		RefreshInterval: *refreshIntervalFlag,
+		CloudmapNamespace: cloudmapNamespaceFlag,
 	}
 	sess, err := session.NewSession()
 	if err != nil {
