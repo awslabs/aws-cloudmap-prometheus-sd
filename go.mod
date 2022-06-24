@@ -8,7 +8,7 @@ require (
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus/common v0.35.0
 	github.com/prometheus/prometheus v0.0.0-20190818123050-43acd0e2e93f
-	github.com/stretchr/testify v1.7.4
+	github.com/stretchr/testify v1.7.5
 	gopkg.in/alecthomas/kingpin.v2 v2.2.6
 )
 
