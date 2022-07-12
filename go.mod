@@ -6,7 +6,7 @@ require (
 	github.com/aws/aws-sdk-go v1.44.42
 	github.com/go-kit/kit v0.12.0
 	github.com/pkg/errors v0.9.1
-	github.com/prometheus/common v0.35.0
+	github.com/prometheus/common v0.36.0
 	github.com/prometheus/prometheus v0.0.0-20190818123050-43acd0e2e93f
 	github.com/stretchr/testify v1.7.5
 	gopkg.in/alecthomas/kingpin.v2 v2.2.6
