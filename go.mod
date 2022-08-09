@@ -3,7 +3,7 @@ module github.com/awslabs/aws-cloudmap-prometheus-sd
 go 1.13
 
 require (
-	github.com/aws/aws-sdk-go v1.44.42
+	github.com/aws/aws-sdk-go v1.44.71
 	github.com/go-kit/kit v0.12.0
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus/common v0.35.0
