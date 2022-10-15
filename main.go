@@ -1,6 +1,8 @@
 package main
 
 import (
+	"aws-cloudmap-prometheus-sd/pkg/adapter"
+	"aws-cloudmap-prometheus-sd/pkg/discovery"
 	"context"
 	"fmt"
 	"os"
@@ -8,9 +10,7 @@ import (
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/ec2metadata"
 	"github.com/aws/aws-sdk-go/aws/session"
-	"github.com/awslabs/aws-cloudmap-prometheus-sd/pkg/adapter"
-	"github.com/awslabs/aws-cloudmap-prometheus-sd/pkg/discovery"
-	"github.com/go-kit/kit/log"
+	"github.com/go-kit/log"
 	"gopkg.in/alecthomas/kingpin.v2"
 )
 
@@ -37,7 +37,7 @@ func main() {
 	ctx := context.Background()
 
 	cfg := discovery.SDConfig{
-		RefreshInterval: *refreshIntervalFlag,
+		RefreshInterval:   *refreshIntervalFlag,
 		CloudmapNamespace: cloudmapNamespaceFlag,
 	}
 	sess, err := session.NewSession()
