@@ -24,8 +24,8 @@ import (
 	"reflect"
 	"sort"
 
-	"github.com/go-kit/kit/log"
-	"github.com/go-kit/kit/log/level"
+	"github.com/go-kit/log"
+	"github.com/go-kit/log/level"
 	"github.com/prometheus/common/model"
 	"github.com/prometheus/prometheus/discovery"
 	"github.com/prometheus/prometheus/discovery/targetgroup"
@@ -129,6 +129,11 @@ func (a *Adapter) writeOutput() error {
 	}
 
 	err = os.Rename(tmpfile.Name(), a.output)
+	if err != nil {
+		return err
+	}
+
+	err = os.Chmod(a.output, 0777)
 	if err != nil {
 		return err
 	}
